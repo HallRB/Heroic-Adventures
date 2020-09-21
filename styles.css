@@ -1,0 +1,29 @@
+.maxContainer {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+}
+
+#welcome {
+    visibility: hidden;
+}
+
+#bodywelcome {
+    background-color: black;
+    color: maroon;
+}
+
+#startbutton {
+    background-color: chartreuse;
+    color: black;
+}
+
+@font-face {
+    font-family: myAtariFont;
+    src: url(AtariSmall.ttf);
+}
+
+div {
+    font-family: myAtariFont;
+}
