@@ -74,3 +74,48 @@ div {
   margin-top: -500px;
   font-size: 50px;
 }
+/* 
+#menumusic {
+  visibility: hidden;
+} */
+
+.dialoguebox {
+  color: whitesmoke;
+  height: 250px;
+  position: absolute;
+  bottom: 1%;
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  align-items: center;
+  text-align: justify;
+  align-self: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top-style: solid;
+  border-top-color: chartreuse;
+}
+
+.dialogue {
+  color: whitesmoke;
+  height: 250px;
+  position: absolute;
+  bottom: 1%;
+  width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  align-items: center;
+  text-align: justify;
+  align-self: center;
+  padding-left: -10px;
+  padding-right: 10px;
+
+}
+
+.choices {
+color:maroon;
+background-color: black;
+border-color: maroon;
+}

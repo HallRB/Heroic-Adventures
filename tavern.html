@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    #diaone {
+        position: absolute;
+    }
+    #diatwo {
+        position: absolute;
+        visibility: hidden;
+    }
+    #diathree {
+        position: absolute;
+        visibility: hidden;
+    }
+    #tavernouterart {
+        margin-right: 700px;
+    }
+
+</style>
+<body id="bodywelcome">
+    <div class="maxContainer">
+        <h1>
+            <img id="tavernouterart" src="Art/tavernouter.png">
+        </h1>
+        <div class="dialoguebox">
+        <div class="dialogue">
+            <h1 id="diaone">You wake up outside in the mud.  Your memory seems foggy.  Above you is a sign for a local tavern.
+                <button type="button" onclick="tavernEnter ()" class="choices">Enter Tavern</button>
+            </h1>
+            <h1 id="diatwo">
+                You enter the tavern and see a large, dank room.  Lanterns danlge above worn tables.  Drunkards nurse their stouts while struggling to keep their eyes open.  You see an open table.
+                <button type="button" onclick="tavernSit ()" class="choices">Sit Down</button>
+            </h1>
+            <h1 id="diathree">
+                A man approaches you.  His face is shrouded by his hood.  He does not give off a welcoming aura but he doesn't seem to want to inflict harm.
+            </br>
+                Stranger: "Hello traveller, mind if I join you?"
+                <button type="button" onclick="tavernTraveler ()" class="choices">Yes</button>
+                <button type="button" onclick="tavernTraveler ()" class="choices">No</button>
+            </h1>
+        </div>
+        </
+    </div>
+
+
+    <script>
+        function tavernEnter () {
+    document.getElementById("diatwo").style.visibility="visible";
+    document.getElementById("diaone").style.visibility="hidden";
+}
+function tavernSit () {
+    document.getElementById("diathree").style.visibility="visible";
+    document.getElementById("diatwo").style.visibility="hidden";
+}
+    </script>
+</body>
+</html>
