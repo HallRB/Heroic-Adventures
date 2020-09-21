@@ -3,6 +3,15 @@
     margin-right: auto;
     text-align: center;
     align-items: center;
+    min-width: 45%;
+    max-width: 1000px;
+    min-height: 1000px;
+    max-height: 1000px;
+    height: fit-content;
+    border-color: chartreuse;
+    border-width: 5px;
+    border-style: solid;
+    padding: 5px;
 }
 
 #welcome {
@@ -17,7 +26,37 @@
 #startbutton {
     background-color: chartreuse;
     color: black;
+    margin-top: 450px;
+    -webkit-border-radius: 60px;
+    border-radius: 60px;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-animation: glowing 1300ms infinite;
+    -moz-animation: glowing 1300ms infinite;
+    -o-animation: glowing 1300ms infinite;
+    animation: glowing 1300ms infinite;
 }
+@keyframes glowing {
+    0% {
+      background-color: #2ba805;
+      box-shadow: 0 0 3px #2ba805;
+    }
+    50% {
+      background-color: #49e819;
+      box-shadow: 0 0 10px #49e819;
+    }
+    100% {
+      background-color: #2ba805;
+      box-shadow: 0 0 3px #2ba805;
+    }
+  }
 
 @font-face {
     font-family: myAtariFont;
@@ -27,3 +66,4 @@
 div {
     font-family: myAtariFont;
 }
+

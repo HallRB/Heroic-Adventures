@@ -1,5 +1,6 @@
 // intro //
 function StartGame () {
     document.getElementById("welcome").style.visibility = "visible";
-    alert('success');
+    document.getElementById("startbutton").style.visibility="hidden";
+    console.log('success');
 }
