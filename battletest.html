@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+</head>
+<body id="bodywelcome">
+    <div class="maxContainer">
+        
+
+        
+        <h1>
+            Boss Hp <div id="hp">100</div>
+        </h1>
+        <button onclick="attack ()">Attack Boss</button>
+        <h1>
+            My HP <div id="hp2">50</div>
+        </h1>
+    </div>
+
+    <script>
+   
+   var bossmaxHP = 100;
+console.log(bossmaxHP)
+        var myhp = 50;
+console.log(myhp);
+    var strength = 4
+function attack () 
+{
+    if (myhp<=0 && bossmaxHP<=0) {
+        alert("After receiving a mortal blow, you deal one of your own, leaving you both dead...")
+        console.log("You both are defeated")}
+        
+    else if (myhp<=0) {
+        alert("You are defeated")
+        console.log("You are defeated")}
+
+    else if (bossmaxHP<=0) {
+        alert("opponent defeated!")
+        console.log("opponent defeated")  
+    } else {
+        var damage = Math.floor((Math.random() * 20) + 1) + strength;
+        console.log("you did " + damage + " damage");
+        if (damage>=20) {
+            alert("you dealt a critical hit!")
+        } 
+        bossmaxHP -= damage;
+
+        var bossdamage = Math.floor((Math.random() * 10) + 1);
+        myhp -= bossdamage;
+        console.log("your opponent dealt " + bossdamage + " damage to you");
+
+    } 
+    document.getElementById("hp").innerHTML=bossmaxHP;
+    console.log("The opponent's HP is " + bossmaxHP);
+    document.getElementById("hp2").innerHTML=myhp;
+    console.log("My HP is " + myhp)};
+
+    // - Math.floor(Math.random() * 25) + 5;
+    </script>
+</body>
+</html>
