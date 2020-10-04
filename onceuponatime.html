@@ -14,6 +14,13 @@
         .multi {
 text-align: left;
 object-position: center;
+font-style: italic;
+color: blueviolet; 
+font-size: 40px;
+font-family: 'Press Start 2P', cursive;
+}
+#line1 {
+    font-family: 'Press Start 2P', cursive;
 }
     </style>
     </head>
@@ -21,10 +28,10 @@ object-position: center;
     <div class="maxContainer">
         <h1>Once Upon A Time... this string grew
             <div class='multi'>
-              <div id='line1' typewriterdata=' Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, ?' keydelay='50' nextline='line2'></div>
-              <div id='line2' typewriterdata=' Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, ?' keydelay='50' nextline='line3'></div>
-              <div id='line3' typewriterdata=' Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, ?' keydelay='50' nextline='line4'></div>
-              <div id='line4' typewriterdata=' Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, ?' keydelay='50' ></div>
+              <div id='line1' typewriterdata="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maiores nemo ipsum omnis dignissimos, ipsa voluptatum cupiditate ipsam sunt iusto exercitationem sapiente cum explicabo accusantium nostrum similique nisi earum, tempora corrupti corporis error iure temporibus odit aliquam? Neque, aliquam ullam! Nihil corrupti et similique voluptates blanditiis" keydelay='50'></div>
+
+            </div>
+            <p id="firstP">firstP<p></p>
             </div>
 
         </h1>
@@ -89,6 +96,13 @@ function mInit() {
   //	for (i=0; i<n; i++)
   //		typeWriter( elementList[i] );
 }
+setTimeout(function onceUponATime() {
+    function addNode() 
+     {var newP = document.createElement("p"); 
+	  var textNode = document.createTextNode(" This is a new text node"); 
+	  newP.appendChild(textNode);
+      document.getElementById("firstP").appendChild(newP); }        
+        },5000)
 
     </script>
 </body>
