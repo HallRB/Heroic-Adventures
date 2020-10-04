@@ -19,8 +19,34 @@ color: blueviolet;
 font-size: 40px;
 font-family: 'Press Start 2P', cursive;
 }
+
 #line1 {
     font-family: 'Press Start 2P', cursive;
+}
+
+button {
+    width: 500px;
+    height: 100px;
+    font-size: 100px;
+    float: right;
+    background-color: black;
+    color: cyan;
+    position: relative;
+}
+
+.btn {
+    font-size: 60px;
+    background-image: repeating-linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red,  violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-width: 2px ;
+  border-style: ridge;
+  border-top-color: cyan; 
+  border-bottom-color: orangered;
+  border-left-color: greenyellow;
+  border-right-color: magenta;
+padding-top: -50px;
+  
 }
     </style>
     </head>
@@ -28,10 +54,10 @@ font-family: 'Press Start 2P', cursive;
     <div class="maxContainer">
         <h1>Once Upon A Time... this string grew
             <div class='multi'>
-              <div id='line1' typewriterdata="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maiores nemo ipsum omnis dignissimos, ipsa voluptatum cupiditate ipsam sunt iusto exercitationem sapiente cum explicabo accusantium nostrum similique nisi earum, tempora corrupti corporis error iure temporibus odit aliquam? Neque, aliquam ullam! Nihil corrupti et similique voluptates blanditiis" keydelay='50'></div>
-
+              <div id='line1' typewriterdata="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maiores nemo ipsum omnis dignissimos, ipsa voluptatum cupiditate ipsam sunt iusto exercitationem sapiente cum explicabo accusantium nostrum similique nisi earum, tempora corrupti corporis error iure temporibus odit aliquam? Neque, aliquam ullam! Nihil corrupti et similique voluptates... " keydelay='50'></div>
+              <p id="firstP"></p>
             </div>
-            <p id="firstP">firstP<p></p>
+            
             </div>
 
         </h1>
@@ -46,7 +72,7 @@ font-family: 'Press Start 2P', cursive;
 
 
 
-
+    <script type="text/javascript" src="https://w3bits.com/wp-content/themes/w/assets/js/prettify.js"></script>
     <script>
 
 alert("the functions are working")
@@ -96,15 +122,18 @@ function mInit() {
   //	for (i=0; i<n; i++)
   //		typeWriter( elementList[i] );
 }
-setTimeout(function onceUponATime() {
-    function addNode() 
-     {var newP = document.createElement("p"); 
-	  var textNode = document.createTextNode(" This is a new text node"); 
+setTimeout(function addNode(){ 
+     var newP = document.createElement("p"); 
+	  var textNode = document.createElement("button"); 
 	  newP.appendChild(textNode);
-      document.getElementById("firstP").appendChild(newP); }        
-        },5000)
+      document.getElementById("firstP").appendChild(newP)
+      textNode.setAttribute('content', 'test content');
+      textNode.setAttribute('class', 'btn');  
+      textNode.textContent = 'LEVEL 1';
+      ;     
+        },21000)
 
-    </script>
+</script>
 </body>
 
 </html>
