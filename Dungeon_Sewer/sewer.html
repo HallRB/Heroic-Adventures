@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../styles.css">
+        <script src="scripts.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+<style>
+    .dungeonhallway {
+        width: 500;
+        height: auto;
+        align-content: center;
+        align-self: center;
+        margin-right: 70%;
+        margin-left: auto;
+
+      visibility: hidden;
+    }
+    #dungeonleft {
+    width: auto;
+    height: 50px;
+    border: none;
+    background-color: black;
+    color: chartreuse;
+    margin-top: 350px;
+    margin-left: 25%;
+    }
+    #dungeonright {
+    width: auto;
+    height: 50px;
+    border: none;
+    background-color: black;
+    color: chartreuse;
+    margin-top: 350px;
+    margin-left: 27%;
+    }
+    #dungeon {
+        width: auto;
+    height: 50px;
+    border: none;
+    background-color: black;
+    color: chartreuse;
+    }
+</style>
+<body id="bodywelcome">
+    <div class="maxContainer">
+        <h1>
+           
+            <div class="dungeonhallway">
+            <img id="dungeon1" style="position: absolute" src="../Art/dungeon1.png">
+            <img id="dungeon2" style="position: absolute" src="../Art/dungeon2.png">
+            <img id="dungeon3" style="position: absolute" src="../Art/dungeon3.png">
+            <img id="dungeon4" style="position: absolute" src="../Art/dungeon4.png">
+            <img id="dungeon5" style="position: absolute" src="../Art/dungeon5.png">
+
+            <img id="dungeonleft" style="position: absolute" src="../Art/dungeonleft.png">
+            <img id="dungeonright" style="position: absolute" src="../Art/dungeonright.png">
+
+            <p>
+                <button style="position: relative" id="dungeonleft" onclick="dungeonleft()">Left</button>
+                <button style="position: absolute" id="dungeonright" onclick="dungeonright()">Right</button>
+            </p>
+            </div>
+            <button id="dungeon" onclick="dungeon()">Walk Forward</button>
+        </h1>
+
+        
+    </div>
+
+    <script>
+        function dungeon () 
+{
+    document.getElementById("dungeon1").style.visibility = "visible";
+    setTimeout(frame2, 750); }
+    
+    function frame2 () {
+    document.getElementById("dungeon1").style.visibility = "hidden";
+    document.getElementById("dungeon2").style.visibility = "visible";
+    setTimeout(frame3, 750); }
+
+    function frame3 () {
+    document.getElementById("dungeon2").style.visibility = "hidden";
+    document.getElementById("dungeon3").style.visibility = "visible";
+    setTimeout(frame4, 750); }
+
+    function frame4 () {
+    document.getElementById("dungeon3").style.visibility = "hidden";
+    document.getElementById("dungeon4").style.visibility = "visible";
+    setTimeout(frame5, 750); }
+
+    function frame5 () {
+    document.getElementById("dungeon4").style.visibility = "hidden";
+    document.getElementById("dungeon5").style.visibility = "visible";
+    document.getElementById("dungeonleft").style.visibility = "visible";
+    document.getElementById("dungeonright").style.visibility = "visible";
+    setTimeout(frame6, 750); }
+
+    //DUNGEON TURN LEFT
+    function dungeonleft () 
+{
+    document.getElementById("dungeon1").style.visibility = "visible";
+    setTimeout(frame2, 750); }
+    
+    function frame2 () {
+    document.getElementById("dungeon1").style.visibility = "hidden";
+    document.getElementById("dungeon2").style.visibility = "visible";
+    setTimeout(frame3, 750); }
+
+    //DUNGEON TURN RIGHT
+    function dungeonright () 
+{
+    document.getElementById("dungeon1").style.visibility = "visible";
+    setTimeout(frame2, 750); }
+    
+    function frame2 () {
+    document.getElementById("dungeon1").style.visibility = "hidden";
+    document.getElementById("dungeon2").style.visibility = "visible";
+    setTimeout(frame3, 750); }
+    </script>
+</body>
+</html>
