@@ -60,13 +60,12 @@
             <img id="dungeon3" style="position: absolute" src="../Art/dungeon3.png">
             <img id="dungeon4" style="position: absolute" src="../Art/dungeon4.png">
             <img id="dungeon5" style="position: absolute" src="../Art/dungeon5.png">
-
             <img id="dungeonleft" style="position: absolute" src="../Art/dungeonleft.png">
             <img id="dungeonright" style="position: absolute" src="../Art/dungeonright.png">
 
             <p>
-                <button style="position: relative" id="dungeonleft" onclick="dungeonleft()">Left</button>
-                <button style="position: absolute" id="dungeonright" onclick="dungeonright()">Right</button>
+                <button style="position: relative" id="dungeonleftbtn" onclick="dungeonleft()">Left</button>
+                <button style="position: absolute" id="dungeonrightbtn" onclick="dungeonright()">Right</button>
             </p>
             </div>
             <button id="dungeon" onclick="dungeon()">Walk Forward</button>
@@ -76,54 +75,70 @@
     </div>
 
     <script>
-        function dungeon () 
+    function dungeon () 
 {
-    document.getElementById("dungeon1").style.visibility = "visible";
-    setTimeout(frame2, 750); }
-    
-    function frame2 () {
-    document.getElementById("dungeon1").style.visibility = "hidden";
-    document.getElementById("dungeon2").style.visibility = "visible";
-    setTimeout(frame3, 750); }
+        document.getElementById("dungeon1").style.visibility = "visible";
+        setTimeout(frame2, 750); }
+        
+        function frame2 () {
+        document.getElementById("dungeon1").style.visibility = "hidden";
+        document.getElementById("dungeon2").style.visibility = "visible";
+        setTimeout(frame3, 750); }
 
-    function frame3 () {
-    document.getElementById("dungeon2").style.visibility = "hidden";
-    document.getElementById("dungeon3").style.visibility = "visible";
-    setTimeout(frame4, 750); }
+        function frame3 () {
+        document.getElementById("dungeon2").style.visibility = "hidden";
+        document.getElementById("dungeon3").style.visibility = "visible";
+        setTimeout(frame4, 750); }
 
-    function frame4 () {
-    document.getElementById("dungeon3").style.visibility = "hidden";
-    document.getElementById("dungeon4").style.visibility = "visible";
-    setTimeout(frame5, 750); }
+        function frame4 () {
+        document.getElementById("dungeon3").style.visibility = "hidden";
+        document.getElementById("dungeon4").style.visibility = "visible";
+        setTimeout(frame5, 750); }
 
-    function frame5 () {
-    document.getElementById("dungeon4").style.visibility = "hidden";
-    document.getElementById("dungeon5").style.visibility = "visible";
-    document.getElementById("dungeonleft").style.visibility = "visible";
-    document.getElementById("dungeonright").style.visibility = "visible";
-    setTimeout(frame6, 750); }
+        function frame5 () {
+        document.getElementById("dungeon4").style.visibility = "hidden";
+        document.getElementById("dungeon5").style.visibility = "visible";
+        document.getElementById("dungeonleftbtn").style.visibility = "visible";
+        document.getElementById("dungeonrightbtn").style.visibility = "visible";
+         }
 
     //DUNGEON TURN LEFT
     function dungeonleft () 
 {
-    document.getElementById("dungeon1").style.visibility = "visible";
-    setTimeout(frame2, 750); }
-    
-    function frame2 () {
-    document.getElementById("dungeon1").style.visibility = "hidden";
-    document.getElementById("dungeon2").style.visibility = "visible";
-    setTimeout(frame3, 750); }
+        document.getElementById("dungeon5").style.visibility = "hidden";
+        document.getElementById("dungeonleftbtn").style.visibility = "hidden";
+        setTimeout(leftframe, 1000);
+}
+        function leftframe() {
+            document.getElementById("dungeonleft").style.visibility = "visible";
+        setTimeout(returntofirst, 1000); 
+}
+        function returntofirst() {
+    document.getElementById("dungeonleft").style.visibility = "hidden";
+    document.getElementById("dungeonright").style.visibility = "hidden";
+    document.getElementById("dungeon1").style.visibility = "visible";   
+    document.getElementById("dungeon").style.visibility = "visible";  
+}
 
     //DUNGEON TURN RIGHT
     function dungeonright () 
 {
-    document.getElementById("dungeon1").style.visibility = "visible";
-    setTimeout(frame2, 750); }
-    
-    function frame2 () {
-    document.getElementById("dungeon1").style.visibility = "hidden";
-    document.getElementById("dungeon2").style.visibility = "visible";
-    setTimeout(frame3, 750); }
+    document.getElementById("dungeon5").style.visibility = "hidden";
+        document.getElementById("dungeonleftbtn").style.visibility = "hidden";
+        document.getElementById("dungeonrightbtn").style.visibility = "hidden";
+        setTimeout(rightframe, 1000);
+}
+        function rightframe() {
+            document.getElementById("dungeonright").style.visibility = "visible";
+        setTimeout(returntofirst, 1000); 
+        }
+        function returntofirst() {
+    document.getElementById("dungeonleft").style.visibility = "hidden";
+    document.getElementById("dungeonright").style.visibility = "hidden";
+    document.getElementById("dungeon1").style.visibility = "visible";   
+    document.getElementById("dungeon").style.visibility = "visible";  
+}
+
     </script>
 </body>
 </html>
